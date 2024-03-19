@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:near_buy/HomeScreen.dart';
 void main() {
   runApp(MyApp());
 }
+String title = "Home Screen";
 
 class MyApp extends StatelessWidget {
   @override
@@ -39,7 +40,10 @@ class VerificationSuccessScreen extends StatelessWidget {
             SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                // Handle the 'Continue' button press
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyHomePage(title: title)),
+                );
               },
               child: Text('Continue >'),
               style: ElevatedButton.styleFrom(
